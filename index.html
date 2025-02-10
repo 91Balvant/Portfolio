@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Portfilio</title>
+    <title>Portfolio</title>
     <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
 <body>
-<header >
+<header>
     <nav>
         <div class="logo"><a ><h1>Balvant Sharma</h1></a></div>
         <div class="navtiles">
@@ -33,7 +33,7 @@
         </ul>
      </div>
 </header>
-<div class="blank"></div>
+<!-- <div class="blank"></div> -->
 <div class="home" id="home">
     <div class="home_left">
         <p class="title">welcome to my world</p>
@@ -101,18 +101,18 @@
     <div class="main_contact">
         <div class="contact_data">
             <div class="title"><h1>Get in Touch</h1></div>
-            <form>
-                <div class="fname"><span>FIRST NAME </span><input type="text"  required></div>
-                <div class="lname"><span>LAST NAME  </span><input type="text" required></div>
-                <div class="email"><span>EMAIL  </span><input type="email" required></div>
-                <div class="number"><span>PHONE NUMBER  </span><input type="number" required></div>
-                <button type="submit">Submit</button>
+            <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+                <input type="hidden" name="access_key" value="fdbcc28d-9257-428b-8c37-7cb59b590c1a">
+                <div class="fname"><span>Name </span><input type="text" name="name" required></div>
+                <div class="lname"><span>E-mail  </span><input type="email" name="email" required></div>
+                <div class="email"><span>Message </span><textarea name="message" required></textarea></div>
+                <button type="submit" class="submit_btn">Submit Form</button>
             </form>
         </div>
     </div>
 </div>
 <footer>
-    <h1>@Copyrights by Balvant Sharma 2025.</h1>
+    <h1>@Copyrights by Balvant Sharma <script>document.write(new Date().getFullYear())</script>.</h1>
 </footer>
 
   <script src="./js/script.js"></script>  
