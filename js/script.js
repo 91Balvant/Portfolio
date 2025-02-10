@@ -5,6 +5,13 @@ const header = document.querySelector('header');
 const blank = document.querySelector('.blank');
 const navHeight = header.offsetHeight;
 
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+
+    event.target.reset();  // This resets all form fields to their initial values 
+});
+
+
+
 small_list.forEach(links =>{
     links.addEventListener('click' , ()=>{
         smallnav.style.height = '0';
@@ -15,12 +22,7 @@ small_list.forEach(links =>{
 window.addEventListener('scroll' , ()=>{
 
     if(window.scrollY >= navHeight){
-        header.classList.add('fixed');
         document.documentElement.style.setProperty('--topPadding', navHeight+'px');
-        blank.style.height = navHeight + 'px';
-    }else{
-        header.classList.remove('fixed');
-        blank.style.height = '0px';
     }
    });
 
